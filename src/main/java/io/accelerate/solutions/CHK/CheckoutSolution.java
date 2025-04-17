@@ -48,7 +48,7 @@ public class CheckoutSolution {
     public int applyAllFreeDeals() {
         int discountValue = 0;
         discountValue += applySameProdFreeDeal(productCatalog.getProduct('U'), 3);
-        discountValue += applyFreeDeal(productCatalog.getProduct('R'), productCatalog.getProduct('Q'), 4);
+        discountValue += applyFreeDeal(productCatalog.getProduct('R'), productCatalog.getProduct('Q'), 3);
         discountValue += applyFreeDeal(productCatalog.getProduct('N'), productCatalog.getProduct('M'), 3);
         discountValue += applySameProdFreeDeal(productCatalog.getProduct('F'), 2);
         discountValue += applyFreeDeal(productCatalog.getProduct('E'), productCatalog.getProduct('B'), 2);
@@ -99,4 +99,5 @@ public class CheckoutSolution {
     }
 
 }
+
 
