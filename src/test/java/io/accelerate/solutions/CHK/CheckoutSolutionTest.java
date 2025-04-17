@@ -20,6 +20,11 @@ public class CheckoutSolutionTest {
     }
 
     @Test
+    public void checkoutOfferNormal() {
+        assertEquals(160, check.checkout("UUUUU"));
+    }
+
+    @Test
     public void checkoutOfferA() {
         assertEquals(145, check.checkout("AABB"));
         assertEquals(130, check.checkout("AAA"));
@@ -37,9 +42,9 @@ public class CheckoutSolutionTest {
     @Test
     public void checkoutOfferE() {
         assertEquals(160, check.checkout("EEEE"));
-        // assertEquals(160, check.checkout("EEEEBB"));
-        // assertEquals(190, check.checkout("EEEEBBB"));
-        // assertEquals(440, check.checkout("AAAAAAEEEEBBB"));
+        assertEquals(160, check.checkout("EEEEBB"));
+        assertEquals(190, check.checkout("EEEEBBB"));
+        assertEquals(440, check.checkout("AAAAAAEEEEBBB"));
     }
 
     @Test
@@ -70,3 +75,4 @@ public class CheckoutSolutionTest {
     }
 
 }
+
