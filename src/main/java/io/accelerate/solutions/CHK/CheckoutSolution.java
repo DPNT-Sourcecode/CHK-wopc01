@@ -88,9 +88,7 @@ public class CheckoutSolution {
     }
 
     public int applySameProdFreeDeal(Product mainProduct, int mainProductAmount) {
-        int valuePrice = (mainProduct.getAmount() / (mainProductAmount + 1)) * mainProduct.getPrice();
-        mainProduct.setAmount(mainProduct.getAmount() / mainProductAmount);
-        return valuePrice;
+        return (mainProduct.getAmount() / (mainProductAmount + 1)) * mainProduct.getPrice();
     }
 
     public int applyBulkDeal(Product mainProduct, int mainProductAmount, int priceDiscount) {
@@ -100,6 +98,7 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
 
