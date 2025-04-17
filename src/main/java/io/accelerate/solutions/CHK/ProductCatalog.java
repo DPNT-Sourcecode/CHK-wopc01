@@ -44,4 +44,3 @@ public class ProductCatalog {
         return productCatalogMap.get(productName);
     }
 }
-
