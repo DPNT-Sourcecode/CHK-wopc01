@@ -49,22 +49,23 @@ public class CheckoutSolution {
     }
 
     public int applyAllBulkDeals() {
-        applyBulkDeal(productCatalog.getProduct('A'), 5, 50);
-        applyBulkDeal(productCatalog.getProduct('A'), 3, 20);
-        applyBulkDeal(productCatalog.getProduct('A'), 3, 20);
+        int discountValue = 0;
 
-        applyBulkDeal(productCatalog.getProduct('A'), 3, 20);
+        discountValue += applyBulkDeal(productCatalog.getProduct('A'), 5, 50);
+        discountValue += applyBulkDeal(productCatalog.getProduct('A'), 3, 20);
+        discountValue += applyBulkDeal(productCatalog.getProduct('B'), 2, 15);
 
-        applyBulkDeal(productCatalog.getProduct('A'), 3, 20);
+        discountValue += applyBulkDeal(productCatalog.getProduct('H'), 10, 20);
+        discountValue += applyBulkDeal(productCatalog.getProduct('H'), 5, 5);
 
-        applyBulkDeal(productCatalog.getProduct('A'), 3, 20);
+        discountValue += applyBulkDeal(productCatalog.getProduct('K'), 2, 10);
 
-        applyBulkDeal(productCatalog.getProduct('A'), 3, 20);
+        discountValue += applyBulkDeal(productCatalog.getProduct('P'), 5, 50);
 
-        applyBulkDeal(productCatalog.getProduct('A'), 3, 20);
+        discountValue += applyBulkDeal(productCatalog.getProduct('Q'), 3, 10);
 
-        applyBulkDeal(productCatalog.getProduct('V'), 3, 20);
-
+        discountValue += applyBulkDeal(productCatalog.getProduct('V'), 3, 20);
+        discountValue += applyBulkDeal(productCatalog.getProduct('V'), 2, 10);
 
     }
 
@@ -77,6 +78,7 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
 
