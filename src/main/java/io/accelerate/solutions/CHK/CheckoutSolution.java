@@ -19,10 +19,12 @@ public class CheckoutSolution {
         catalogueValues.put('C', 20);
         catalogueValues.put('D', 15);
         catalogueValues.put('E', 40);
+        catalogueValues.put('F', 10);
 
         int aCounter = 0;
         int bCounter = 0;
         int eCounter = 0;
+        int fCounter = 0;
         int currentBasketValue = 0;
 
         for (char item : skus.toCharArray()) {
@@ -31,6 +33,8 @@ public class CheckoutSolution {
             if (item == 'B')
                 bCounter++;
             if (item == 'E')
+                eCounter++;
+            if (item == 'F')
                 eCounter++;
 
             currentBasketValue += catalogueValues.get(item);
@@ -49,11 +53,10 @@ public class CheckoutSolution {
             currentBasketValue -= bCounter / 2 * 15;
         }
 
+        // F discount
+        currentBasketValue -= (aCounter / 5) * 50;
+
         return currentBasketValue;
     }
 
 }
-
-
-
-
