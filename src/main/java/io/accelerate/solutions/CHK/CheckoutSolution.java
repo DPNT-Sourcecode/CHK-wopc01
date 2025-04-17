@@ -41,15 +41,30 @@ public class CheckoutSolution {
 
     public void applyAllFreeDeals() {
         applyFreeDeal(productCatalog.getProduct('U'), productCatalog.getProduct('U'), 3);
-        applyFreeDeal(productCatalog.getProduct('R'), productCatalog.getProduct('Q'), 1);
-        applyFreeDeal(productCatalog.getProduct('U'), productCatalog.getProduct('U'), 3);
-        applyFreeDeal(productCatalog.getProduct('U'), productCatalog.getProduct('U'), 3);
-        applyFreeDeal(productCatalog.getProduct('U'), productCatalog.getProduct('U'), 3);
-        
+        applyFreeDeal(productCatalog.getProduct('R'), productCatalog.getProduct('Q'), 4);
+        applyFreeDeal(productCatalog.getProduct('N'), productCatalog.getProduct('M'), 3);
+        applyFreeDeal(productCatalog.getProduct('F'), productCatalog.getProduct('F'), 2);
+        applyFreeDeal(productCatalog.getProduct('E'), productCatalog.getProduct('B'), 2);
 
     }
 
     public int applyAllBulkDeals() {
+        applyBulkDeal(productCatalog.getProduct('A'), 5, 50);
+        applyBulkDeal(productCatalog.getProduct('A'), 3, 20);
+        applyBulkDeal(productCatalog.getProduct('A'), 3, 20);
+
+        applyBulkDeal(productCatalog.getProduct('A'), 3, 20);
+
+        applyBulkDeal(productCatalog.getProduct('A'), 3, 20);
+
+        applyBulkDeal(productCatalog.getProduct('A'), 3, 20);
+
+        applyBulkDeal(productCatalog.getProduct('A'), 3, 20);
+
+        applyBulkDeal(productCatalog.getProduct('A'), 3, 20);
+
+        applyBulkDeal(productCatalog.getProduct('V'), 3, 20);
+
 
     }
 
@@ -62,6 +77,7 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
 
