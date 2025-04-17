@@ -9,7 +9,10 @@ public class CheckoutSolution {
     public Integer checkout(String skus) {
         if (skus == "")
             return 0;
-            
+
+        if (!skus.matches("[a-zA-Z]+"))
+            return -1;
+
         catalogueValues = new HashMap<>();
         catalogueValues.put('A', 50);
         catalogueValues.put('B', 30);
@@ -34,6 +37,7 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
 

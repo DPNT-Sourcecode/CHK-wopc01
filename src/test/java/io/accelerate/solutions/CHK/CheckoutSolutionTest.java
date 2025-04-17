@@ -30,7 +30,7 @@ public class CheckoutSolutionTest {
 
     @Test
     public void checkoutNotValidString() {
-        assertEquals(-1, check.checkout("!213s%^"));
+        assertEquals(-1, check.checkout("A!213s%^"));
     }
 
     @Test
@@ -39,5 +39,6 @@ public class CheckoutSolutionTest {
     }
 
 }
+
 
 
