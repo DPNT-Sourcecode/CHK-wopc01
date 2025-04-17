@@ -21,16 +21,15 @@ public class CheckoutSolutionTest {
     @Test
     public void checkoutOfferA() {
         assertEquals(145, check.checkout("AABB"));
-        assertEquals(145, check.checkout("AABB"));
+        assertEquals(130, check.checkout("AAA"));
+        assertEquals(200, check.checkout("AAAAA"));
     }
 
     @Test
     public void checkoutOfferB() {
-        assertEquals(145, check.checkout("AABB"));
-        assertEquals(160, check.checkout("EEEE"));
-        assertEquals(160, check.checkout("EEEEBB"));
-        assertEquals(190, check.checkout("EEEEBBB"));
-
+        assertEquals(45, check.checkout("BB"));
+        assertEquals(75, check.checkout("BBB"));
+        assertEquals(90, check.checkout("BBBB"));
         assertEquals(440, check.checkout("AAAAAAEEEEBBB"));
     }
 
@@ -70,4 +69,5 @@ public class CheckoutSolutionTest {
     }
 
 }
+
 
