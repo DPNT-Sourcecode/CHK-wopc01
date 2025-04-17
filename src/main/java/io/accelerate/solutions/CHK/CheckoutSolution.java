@@ -86,22 +86,28 @@ public class CheckoutSolution {
                 productCatalog.getProduct('S'), productCatalog.getProduct('Y'), productCatalog.getProduct('X') };
         int totalAmount = 0;
         int totalPriceDiscount = 0;
-        int totalPriceItems = totalAmount / mainProductsDealAmount;
+        
 
         for (Product product : mainProducts) {
             totalAmount += product.getAmount();
         }
 
+        int totalPriceItems = totalAmount / mainProductsDealAmount;
+
         for (Product product : mainProducts) {
+            System.out.println(totalPriceItems);
+            System.out.println(totalPriceDiscount);
             if (totalPriceItems > 0) {
                 totalPriceDiscount += product.getAmount() * product.getPrice();
                 totalPriceItems -= product.getAmount();
             }
         }
 
+        System.out.println(totalPriceItems);
+        System.out.println(totalPriceDiscount);
         int dealValue = (totalAmount / mainProductsDealAmount) * (totalPriceDiscount - (totalAmount / mainProductsDealAmount));
-        System.out.println(4/3 );
         return dealValue;
     }
 
 }
+
