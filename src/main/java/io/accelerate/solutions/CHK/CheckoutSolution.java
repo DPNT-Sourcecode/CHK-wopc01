@@ -104,9 +104,6 @@ public class CheckoutSolution {
             }
         }
 
-        System.out.println(totalAmount);
-        if (totalAmount % 3 == 0)
-            return ((totalAmount / mainProductsDealAmount) * 45);
         int dealValue = (totalAmount / mainProductsDealAmount)
                 * (totalPriceDiscount - ((totalAmount / mainProductsDealAmount) * 45));
 
@@ -114,6 +111,7 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
 
