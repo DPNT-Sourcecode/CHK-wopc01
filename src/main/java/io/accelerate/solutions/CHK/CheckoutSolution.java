@@ -44,7 +44,7 @@ public class CheckoutSolution {
         // // F discount
         // currentBasketValue -= (fCounter / 3) * 10;
 
-        return currentBasketValue;
+        return currentBasketValue - applyAllBulkDeals();
     }
 
     public void applyAllFreeDeals() {
@@ -84,11 +84,12 @@ public class CheckoutSolution {
 
     public int applyBulkDeal(Product mainProduct, int mainProductAmount, int priceDiscount) {
         int dealValue = (mainProduct.getAmount() / mainProductAmount) * priceDiscount;
-        mainProduct.getAmount() = (mainProduct.getAmount() / mainProductAmount);
+        mainProduct.setAmount(mainProduct.getAmount() - (mainProduct.getAmount() / mainProductAmount));
         return dealValue;
     }
 
 }
+
 
 
 
