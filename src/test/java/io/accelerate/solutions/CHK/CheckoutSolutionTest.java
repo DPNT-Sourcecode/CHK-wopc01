@@ -22,7 +22,7 @@ public class CheckoutSolutionTest {
     public void checkoutNormal() {
         assertEquals(145, check.checkout("AABB"));
         assertEquals(160, check.checkout("EEEE"));
-        assertEquals(160, check.checkout("EEEEB"));
+        assertEquals(160, check.checkout("EEEEBB"));
     }
 
     @Test
@@ -46,5 +46,6 @@ public class CheckoutSolutionTest {
     }
 
 }
+
 
 

@@ -36,8 +36,8 @@ public class CheckoutSolution {
             currentBasketValue += catalogueValues.get(item);
         }
 
-        if (bCounter > eCounter/2)
-            bCounter -= (eCounter / 2);
+        if (bCounter > 0)
+            currentBasketValue -= Math.min((eCounter / 2), bCounter) * 30;
 
         currentBasketValue -= (aCounter / 5) * 50;
         currentBasketValue -= ((aCounter % 5) / 3) * 20;
@@ -47,5 +47,6 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
