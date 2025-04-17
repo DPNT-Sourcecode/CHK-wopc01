@@ -7,6 +7,9 @@ public class CheckoutSolution {
     HashMap<Character, Integer> catalogueValues;
 
     public Integer checkout(String skus) {
+        if (skus == "")
+            return 0;
+            
         catalogueValues = new HashMap<>();
         catalogueValues.put('A', 50);
         catalogueValues.put('B', 30);
@@ -31,5 +34,6 @@ public class CheckoutSolution {
     }
 
 }
+
 
 

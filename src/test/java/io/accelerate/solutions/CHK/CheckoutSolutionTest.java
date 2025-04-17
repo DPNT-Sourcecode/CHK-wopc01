@@ -24,9 +24,20 @@ public class CheckoutSolutionTest {
     }
 
     @Test
+    public void checkoutEmpty() {
+        assertEquals(0, check.checkout(""));
+    }
+
+    @Test
+    public void checkoutNotValidString() {
+        assertEquals(-1, check.checkout("!213s%^"));
+    }
+
+    @Test
     public void checkoutNotValidStringFail() {
 
     }
 
 }
+
 
