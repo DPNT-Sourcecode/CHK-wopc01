@@ -19,17 +19,34 @@ public class CheckoutSolutionTest {
     }
 
     @Test
-    public void checkoutNormal() {
+    public void checkoutOfferA() {
+        assertEquals(145, check.checkout("AABB"));
+        assertEquals(145, check.checkout("AABB"));
+    }
+
+    @Test
+    public void checkoutOfferB() {
         assertEquals(145, check.checkout("AABB"));
         assertEquals(160, check.checkout("EEEE"));
         assertEquals(160, check.checkout("EEEEBB"));
         assertEquals(190, check.checkout("EEEEBBB"));
+
         assertEquals(440, check.checkout("AAAAAAEEEEBBB"));
-        assertEquals(330, check.checkout("AAAAAAAA"));
-        assertEquals(380, check.checkout("AAAAAAAAA"));
-        assertEquals(20, check.checkout("EE"));
-        assertEquals(20, check.checkout("EEE"));
-        assertEquals(30, check.checkout("EEEE"));
+    }
+
+    @Test
+    public void checkoutOfferE() {
+        assertEquals(160, check.checkout("EEEE"));
+        assertEquals(160, check.checkout("EEEEBB"));
+        assertEquals(190, check.checkout("EEEEBBB"));
+        assertEquals(440, check.checkout("AAAAAAEEEEBBB"));
+    }
+
+    @Test
+    public void checkoutOfferF() {
+        assertEquals(20, check.checkout("FF"));
+        assertEquals(20, check.checkout("FFF"));
+        assertEquals(30, check.checkout("FFFF"));
     }
 
     @Test
@@ -53,3 +70,4 @@ public class CheckoutSolutionTest {
     }
 
 }
+

@@ -35,7 +35,7 @@ public class CheckoutSolution {
             if (item == 'E')
                 eCounter++;
             if (item == 'F')
-                eCounter++;
+                fCounter++;
 
             currentBasketValue += catalogueValues.get(item);
         }
@@ -54,9 +54,10 @@ public class CheckoutSolution {
         }
 
         // F discount
-        currentBasketValue -= (aCounter / 5) * 50;
+        currentBasketValue -= (fCounter / 3) * 10;
 
         return currentBasketValue;
     }
 
 }
+
