@@ -74,10 +74,11 @@ public class CheckoutSolutionTest {
     public void checkoutGroupOfferSpecial() {
         assertEquals(45, check.checkout("XYY"));
         assertEquals(65, check.checkout("ZYSS"));
-        assertEquals(65, check.checkout("ZYSS"));
+        assertEquals(90, check.checkout("STXSTX"));
     }
 
 }
+
 
 
 
