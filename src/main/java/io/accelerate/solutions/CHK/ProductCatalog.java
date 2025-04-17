@@ -25,14 +25,14 @@ public class ProductCatalog {
         productCatalogMap.put('P', new Product('P', 50, 0));
         productCatalogMap.put('Q', new Product('Q', 30, 0));
         productCatalogMap.put('R', new Product('R', 50, 0));
-        productCatalogMap.put('S', new Product('S', 30, 0));
+        productCatalogMap.put('S', new Product('S', 20, 0));
         productCatalogMap.put('T', new Product('T', 20, 0));
         productCatalogMap.put('U', new Product('U', 40, 0));
         productCatalogMap.put('V', new Product('V', 50, 0));
         productCatalogMap.put('W', new Product('W', 20, 0));
-        productCatalogMap.put('X', new Product('X', 90, 0));
-        productCatalogMap.put('Y', new Product('Y', 10, 0));
-        productCatalogMap.put('Z', new Product('Z', 50, 0));
+        productCatalogMap.put('X', new Product('X', 17, 0));
+        productCatalogMap.put('Y', new Product('Y', 20, 0));
+        productCatalogMap.put('Z', new Product('Z', 21, 0));
 
     }
 
@@ -44,3 +44,4 @@ public class ProductCatalog {
         return productCatalogMap.get(productName);
     }
 }
+

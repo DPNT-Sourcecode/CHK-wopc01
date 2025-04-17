@@ -26,22 +26,6 @@ public class CheckoutSolution {
             currentBasketValue += (product.amount * product.price);
         }
 
-        // // E discount
-        // currentBasketValue -= Math.min((eCounter / 2), bCounter) * 30;
-        // bCounter -= eCounter / 2;
-
-        // // A discount
-        // currentBasketValue -= (aCounter / 5) * 50;
-        // currentBasketValue -= ((aCounter % 5) / 3) * 20;
-
-        // // B discount
-        // if (bCounter > 0) {
-        // currentBasketValue -= bCounter / 2 * 15;
-        // }
-
-        // // F discount
-        // currentBasketValue -= (fCounter / 3) * 10;
-
         return (currentBasketValue - applyAllFreeDeals() - applyAllBulkDeals());
     }
 
@@ -53,7 +37,6 @@ public class CheckoutSolution {
         discountValue += applySameProdFreeDeal(productCatalog.getProduct('F'), 2);
         discountValue += applyFreeDeal(productCatalog.getProduct('E'), productCatalog.getProduct('B'), 2);
 
-        System.out.println(discountValue);
         return discountValue;
     }
 
@@ -77,7 +60,7 @@ public class CheckoutSolution {
         discountValue += applyBulkDeal(productCatalog.getProduct('V'), 3, 20);
         discountValue += applyBulkDeal(productCatalog.getProduct('V'), 2, 10);
         discountValue += applyBulkGroupDeal(3);
-        System.out.println(discountValue);
+
         return discountValue;
     }
 
@@ -110,17 +93,21 @@ public class CheckoutSolution {
         }
 
         for (Product product : mainProducts) {
+            System.out.println(product.getAmount());
             if (totalPriceItems > 0) {
                 totalPriceDiscount += product.getAmount() * product.getPrice();
                 totalPriceItems -= product.getAmount();
             }
         }
 
+        
+        System.out.println(mainProductsAmount);
         int dealValue = (totalAmount / mainProductsAmount) * (totalPriceDiscount - (totalAmount / mainProductsAmount));
         return dealValue;
     }
 
 }
+
 
 
 

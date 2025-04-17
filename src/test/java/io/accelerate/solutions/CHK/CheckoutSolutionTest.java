@@ -70,5 +70,11 @@ public class CheckoutSolutionTest {
         assertEquals(30, check.checkout("FFFF"));
     }
 
+    @Test
+    public void checkoutGroupOfferSpecial() {
+        assertEquals(52, check.checkout("XYYZ"));
+    }
+
 }
+
 
