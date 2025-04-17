@@ -22,11 +22,11 @@ public class CheckoutSolution {
             productCatalog.getProduct(item).amount++;
         }
 
+        applyAllFreeDeals();
+
         for (Product product : productCatalog.getProductCatalogMap().values()) {
             currentBasketValue += (product.amount * product.price);
         }
-
-        applyAllFreeDeals();
 
         // // E discount
         // currentBasketValue -= Math.min((eCounter / 2), bCounter) * 30;
@@ -81,7 +81,6 @@ public class CheckoutSolution {
 
     public void applyFreeDeal(Product mainProduct, Product dealProduct, int mainProductAmount) {
         dealProduct.amount -= (mainProduct.getAmount() / mainProductAmount);
-        System.out.println(" " + dealProduct.amount);
     }
 
     public void applySameProdFreeDeal(Product mainProduct, int mainProductAmount) {
@@ -95,6 +94,7 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
 
