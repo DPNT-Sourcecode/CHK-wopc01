@@ -82,7 +82,7 @@ public class CheckoutSolution {
     }
 
     public int applyFreeDeal(Product mainProduct, Product dealProduct, int mainProductAmount) {
-        return (mainProduct.getAmount() / mainProductAmount) * mainProduct.getPrice();
+        return (mainProduct.getAmount() / mainProductAmount) * dealProduct.getPrice();
     }
 
     public int applySameProdFreeDeal(Product mainProduct, int mainProductAmount) {
@@ -96,5 +96,6 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
