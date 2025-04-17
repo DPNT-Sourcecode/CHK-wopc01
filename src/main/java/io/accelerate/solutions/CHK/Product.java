@@ -27,4 +27,3 @@ public class Product {
         this.amount = amount;
     }
 }
-

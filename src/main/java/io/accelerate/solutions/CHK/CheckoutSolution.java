@@ -26,7 +26,6 @@ public class CheckoutSolution {
         }
 
         applyAllFreeDeals();
-        applyAllBulkDeals();
 
         // // E discount
         // currentBasketValue -= Math.min((eCounter / 2), bCounter) * 30;
@@ -44,7 +43,7 @@ public class CheckoutSolution {
         // // F discount
         // currentBasketValue -= (fCounter / 3) * 10;
 
-        return currentBasketValue - applyAllBulkDeals();
+        return (currentBasketValue - applyAllBulkDeals());
     }
 
     public void applyAllFreeDeals() {
@@ -89,12 +88,3 @@ public class CheckoutSolution {
     }
 
 }
-
-
-
-
-
-
-
-
-
