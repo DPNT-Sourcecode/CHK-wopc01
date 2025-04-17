@@ -20,7 +20,7 @@ public class CheckoutSolutionTest {
 
     @Test
     public void checkoutNormal() {
-        assertEquals(190, check.checkout("ABBBBA"));
+        assertEquals(145, check.checkout("AABB"));
     }
 
     @Test
@@ -44,3 +44,4 @@ public class CheckoutSolutionTest {
     }
 
 }
+

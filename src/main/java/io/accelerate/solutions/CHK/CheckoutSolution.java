@@ -30,16 +30,20 @@ public class CheckoutSolution {
                 aCounter++;
             if (item == 'B')
                 bCounter++;
+            if (item == 'E')
+                eCounter++;
 
             currentBasketValue += catalogueValues.get(item);
         }
 
-        if (bCounter > 0) bCounter -= (eCounter / 2);
-        
-        currentBasketValue -= (aCounter / 5) * 50 + (aCounter / 2) * 15;
+        if (bCounter > 0)
+            bCounter -= (eCounter / 2);
+
+        currentBasketValue -= (aCounter / 5) * 50 + (aCounter % 5) * 20;
 
         currentBasketValue -= bCounter / 2 * 15;
         return currentBasketValue;
     }
 
 }
+
