@@ -82,8 +82,8 @@ public class CheckoutSolution {
     }
 
     public int applyFreeDeal(Product mainProduct, Product dealProduct, int mainProductAmount) {
-        int valuePrice = (mainProduct.getAmount() / mainProductAmount) * dealProduct.getPrice();
-        dealProduct.setAmount(dealProduct.getAmount() - mainProduct.getAmount() / mainProductAmount);
+        int valuePrice = Math.min (mainProduct.getAmount() / mainProductAmount), ) * dealProduct.getPrice();
+        dealProduct.setAmount(dealProduct.getAmount() - (mainProduct.getAmount() / mainProductAmount));
         return valuePrice;
     }
 
@@ -98,6 +98,7 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
 
