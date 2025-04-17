@@ -2,15 +2,11 @@ package io.accelerate.solutions.CHK;
 
 import java.util.HashMap;
 
-import io.accelerate.runner.SolutionNotImplementedException;
-
 public class CheckoutSolution {
 
     HashMap<Character, Integer> catalogueValues;
 
     public Integer checkout(String skus) {
-        // Check format of string to check valid
-        // Check correct value of basket
         catalogueValues = new HashMap<>();
         catalogueValues.put('A', 50);
         catalogueValues.put('B', 30);
@@ -22,16 +18,18 @@ public class CheckoutSolution {
         int currentBasketValue = 0;
 
         for (char item : skus.toCharArray()) {
+            if (item == 'A')
+                aCounter++;
+            if (item == 'B')
+                bCounter++;
+
             currentBasketValue += catalogueValues.get(item);
         }
 
-        System.out.println(currentBasketValue);
-        System.out.println("adasdadadadasdadadadadada");
         currentBasketValue -= (aCounter / 3) * 20 + (bCounter / 2) * 15;
-        System.out.println(currentBasketValue);
         return currentBasketValue;
     }
 
-
 }
+
 
