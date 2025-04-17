@@ -10,7 +10,7 @@ public class CheckoutSolution {
         if (skus == "")
             return 0;
 
-        if (!skus.matches("[a-zA-Z]+"))
+        if (!skus.matches("[A-Z]+"))
             return -1;
 
         catalogueValues = new HashMap<>();
@@ -37,6 +37,7 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
 

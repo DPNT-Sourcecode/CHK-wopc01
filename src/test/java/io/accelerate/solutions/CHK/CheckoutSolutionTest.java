@@ -30,7 +30,12 @@ public class CheckoutSolutionTest {
 
     @Test
     public void checkoutNotValidString() {
-        assertEquals(-1, check.checkout("A!213s%^"));
+        assertEquals(-1, check.checkout("Aa!213s%^"));
+    }
+
+    @Test
+    public void checkoutNotValidStringLowerCase() {
+        assertEquals(-1, check.checkout("bac"));
     }
 
     @Test
@@ -39,6 +44,7 @@ public class CheckoutSolutionTest {
     }
 
 }
+
 
 
 
