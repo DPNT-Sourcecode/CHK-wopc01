@@ -43,7 +43,7 @@ public class CheckoutSolution {
         // // F discount
         // currentBasketValue -= (fCounter / 3) * 10;
 
-        return (currentBasketValue - applyAllBulkDeals());
+        return (currentBasketValue - applyAllFreeDeals() + applyAllBulkDeals());
     }
 
     public int applyAllFreeDeals() {
@@ -53,7 +53,6 @@ public class CheckoutSolution {
         discountValue += applyFreeDeal(productCatalog.getProduct('N'), productCatalog.getProduct('M'), 3);
         discountValue += applySameProdFreeDeal(productCatalog.getProduct('F'), 2);
         discountValue += applyFreeDeal(productCatalog.getProduct('E'), productCatalog.getProduct('B'), 2);
-
         return discountValue;
     }
 
@@ -85,6 +84,7 @@ public class CheckoutSolution {
     }
 
     public int applySameProdFreeDeal(Product mainProduct, int mainProductAmount) {
+        System.out.println((mainProduct.getAmount() / mainProductAmount + 1) * mainProduct.getPrice());
         return (mainProduct.getAmount() / mainProductAmount + 1) * mainProduct.getPrice();
     }
 
@@ -95,3 +95,4 @@ public class CheckoutSolution {
     }
 
 }
+
