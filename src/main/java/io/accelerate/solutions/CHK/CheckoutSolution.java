@@ -76,7 +76,7 @@ public class CheckoutSolution {
 
         discountValue += applyBulkDeal(productCatalog.getProduct('V'), 3, 20);
         discountValue += applyBulkDeal(productCatalog.getProduct('V'), 2, 10);
-        discountValue += applyBulkGroupDeal({productCatalog.getProduct('Z'),productCatalog.getProduct('Z')}, 2, 10);
+        discountValue += applyBulkGroupDeal(3);
         System.out.println(discountValue);
         return discountValue;
     }
@@ -98,7 +98,9 @@ public class CheckoutSolution {
         return dealValue;
     }
 
-    public int applyBulkGroupDeal(Product[] mainProducts, int mainProductsAmount, int priceDiscount) {
+    public int applyBulkGroupDeal(int mainProductsAmount) {
+        Product[] mainProducts = new Product[] { productCatalog.getProduct('Z'), productCatalog.getProduct('T'),
+                productCatalog.getProduct('S'), productCatalog.getProduct('Y'), productCatalog.getProduct('X') };
         int totalAmount = 0;
         int totalPriceDiscount = 0;
         int totalPriceItems = totalAmount / mainProductsAmount;
@@ -119,6 +121,7 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
 

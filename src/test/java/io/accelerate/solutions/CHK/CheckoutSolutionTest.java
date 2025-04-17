@@ -20,6 +20,21 @@ public class CheckoutSolutionTest {
     }
 
     @Test
+    public void checkoutEmpty() {
+        assertEquals(0, check.checkout(""));
+    }
+
+    @Test
+    public void checkoutNotValidString() {
+        assertEquals(-1, check.checkout("Aa!213s%^"));
+    }
+
+    @Test
+    public void checkoutNotValidStringLowerCase() {
+        assertEquals(-1, check.checkout("bac"));
+    }
+
+    @Test
     public void checkoutOfferNormal() {
         assertEquals(150, check.checkout("RRRQ"));
         assertEquals(300, check.checkout("RRRQRQRR"));
@@ -55,24 +70,5 @@ public class CheckoutSolutionTest {
         assertEquals(30, check.checkout("FFFF"));
     }
 
-    @Test
-    public void checkoutEmpty() {
-        assertEquals(0, check.checkout(""));
-    }
-
-    @Test
-    public void checkoutNotValidString() {
-        assertEquals(-1, check.checkout("Aa!213s%^"));
-    }
-
-    @Test
-    public void checkoutNotValidStringLowerCase() {
-        assertEquals(-1, check.checkout("bac"));
-    }
-
-    @Test
-    public void checkoutNotValidStringFail() {
-
-    }
-
 }
+
