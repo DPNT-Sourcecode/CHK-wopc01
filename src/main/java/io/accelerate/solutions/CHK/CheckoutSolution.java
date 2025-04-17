@@ -88,10 +88,11 @@ public class CheckoutSolution {
     public int applyBulkDeal(Product mainProduct, int mainProductAmount, int priceDiscount) {
         int dealValue = (mainProduct.getAmount() / mainProductAmount) * priceDiscount;
         mainProduct.setAmount(mainProduct.getAmount() - (mainProduct.getAmount() / mainProductAmount));
-        System.out.println();
+        System.out.println(mainProduct.getAmount());
         return dealValue;
     }
 
 }
+
 
 
