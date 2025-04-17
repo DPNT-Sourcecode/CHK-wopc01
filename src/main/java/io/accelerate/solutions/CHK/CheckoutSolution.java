@@ -39,15 +39,30 @@ public class CheckoutSolution {
         return currentBasketValue;
     }
 
+    public void applyAllFreeDeals() {
+        applyFreeDeal(productCatalog.getProduct('U'), productCatalog.getProduct('U'), 3);
+        applyFreeDeal(productCatalog.getProduct('R'), productCatalog.getProduct('Q'), 1);
+        applyFreeDeal(productCatalog.getProduct('U'), productCatalog.getProduct('U'), 3);
+        applyFreeDeal(productCatalog.getProduct('U'), productCatalog.getProduct('U'), 3);
+        applyFreeDeal(productCatalog.getProduct('U'), productCatalog.getProduct('U'), 3);
+        
+
+    }
+
+    public int applyAllBulkDeals() {
+
+    }
+
     public void applyFreeDeal(Product mainProduct, Product dealProduct, int mainProductAmount) {
         mainProduct.amount -= (mainProduct.getAmount() / mainProductAmount + 1) * dealProduct.getPrice();
     }
 
-    public int applyBulkDeal(Product mainProduct, int mainProductAmount) {
-        return ((mainProduct.getAmount() % mainProductAmount) / 3) * 20;
+    public int applyBulkDeal(Product mainProduct, int mainProductAmount, int priceDiscount) {
+        return (mainProduct.getAmount() / mainProductAmount) * priceDiscount;
     }
 
 }
+
 
 
 
