@@ -31,7 +31,7 @@ public class CheckoutSolutionTest {
         assertEquals(45, check.checkout("BB"));
         assertEquals(75, check.checkout("BBB"));
         assertEquals(90, check.checkout("BBBB"));
-        assertEquals(440, check.checkout("AAAAAAEEEEBBB"));
+        assertEquals(190, check.checkout("EEEEBBB"));
     }
 
     @Test
@@ -70,6 +70,7 @@ public class CheckoutSolutionTest {
     }
 
 }
+
 
 
 

@@ -48,10 +48,10 @@ public class CheckoutSolution {
     }
 
     public void applyAllFreeDeals() {
-        applyFreeDeal(productCatalog.getProduct('U'), productCatalog.getProduct('U'), 3);
+        applySameProdFreeDeal(productCatalog.getProduct('U'), 3);
         applyFreeDeal(productCatalog.getProduct('R'), productCatalog.getProduct('Q'), 4);
         applyFreeDeal(productCatalog.getProduct('N'), productCatalog.getProduct('M'), 3);
-        applyFreeDeal(productCatalog.getProduct('F'), productCatalog.getProduct('F'), 2);
+        applySameProdFreeDeal(productCatalog.getProduct('F'), 2);
         applyFreeDeal(productCatalog.getProduct('E'), productCatalog.getProduct('B'), 2);
 
     }
@@ -61,7 +61,7 @@ public class CheckoutSolution {
 
         discountValue += applyBulkDeal(productCatalog.getProduct('A'), 5, 50);
         discountValue += applyBulkDeal(productCatalog.getProduct('A'), 3, 20);
-  
+
         discountValue += applyBulkDeal(productCatalog.getProduct('B'), 2, 15);
 
         discountValue += applyBulkDeal(productCatalog.getProduct('H'), 10, 20);
@@ -80,21 +80,21 @@ public class CheckoutSolution {
     }
 
     public void applyFreeDeal(Product mainProduct, Product dealProduct, int mainProductAmount) {
-        mainProduct.amount -= (mainProduct.getAmount() / mainProductAmount + 1) * dealProduct.getPrice();
+        mainProduct.amount -= (mainProduct.getAmount() / mainProductAmount) * dealProduct.getPrice();
     }
 
-    public void applySameProdDeal(Product mainProduct, Product dealProduct, int mainProductAmount) {
-        mainProduct.amount -= (mainProduct.getAmount() / mainProductAmount + 1) * dealProduct.getPrice();
+    public void applySameProdFreeDeal(Product mainProduct, int mainProductAmount) {
+        mainProduct.amount -= (mainProduct.getAmount() / mainProductAmount + 1) * mainProduct.getPrice();
     }
 
     public int applyBulkDeal(Product mainProduct, int mainProductAmount, int priceDiscount) {
         int dealValue = (mainProduct.getAmount() / mainProductAmount) * priceDiscount;
         mainProduct.setAmount(mainProduct.getAmount() % mainProductAmount);
-        System.out.println(mainProduct.getAmount());
         return dealValue;
     }
 
 }
+
 
 
 
