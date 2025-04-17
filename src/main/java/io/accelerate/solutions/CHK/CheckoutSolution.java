@@ -1,16 +1,20 @@
 package io.accelerate.solutions.CHK;
 
 import java.util.HashMap;
-import Product;
+import io.accelerate.solutions.CHK.Product;
 
 public class CheckoutSolution {
 
     HashMap<Character, Product> catalogueValues = new HashMap<>();
-    catalogueValues.put('A', 50);
-    catalogueValues.put('B', 30);
-    catalogueValues.put('C', 20);
-    catalogueValues.put('D', 15);
-    catalogueValues.put('E', 40);
+    catalogueValues.put('A', new Product('A',50, 0));
+    catalogueValues.put('B', new Product('A',50, 0));
+    catalogueValues.put('C', new Product('A',50, 0));
+    catalogueValues.put('D', new Product('A',50, 0));
+    catalogueValues.put('E', new Product('A',50, 0));
+    catalogueValues.put('F', 30);
+    catalogueValues.put('G', 20);
+    catalogueValues.put('H', 15);
+    catalogueValues.put('I', 40);
     catalogueValues.put('F', 10);
 
 
@@ -62,4 +66,5 @@ public class CheckoutSolution {
     }
 
 }
+
 
