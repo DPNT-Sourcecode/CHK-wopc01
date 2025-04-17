@@ -17,7 +17,7 @@ public class ProductCatalog {
         productCatalogMap.put('H', new Product('H', 10, 0));
         productCatalogMap.put('I', new Product('I', 35, 0));
         productCatalogMap.put('J', new Product('J', 60, 0));
-        productCatalogMap.put('K', new Product('K', 80, 0));
+        productCatalogMap.put('K', new Product('K', 70, 0));
         productCatalogMap.put('L', new Product('L', 90, 0));
         productCatalogMap.put('M', new Product('M', 15, 0));
         productCatalogMap.put('N', new Product('N', 40, 0));
@@ -44,3 +44,4 @@ public class ProductCatalog {
         return productCatalogMap.get(productName);
     }
 }
+

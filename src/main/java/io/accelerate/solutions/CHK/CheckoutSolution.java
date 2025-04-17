@@ -51,7 +51,7 @@ public class CheckoutSolution {
         discountValue += applyBulkDeal(productCatalog.getProduct('H'), 10, 20);
         discountValue += applyBulkDeal(productCatalog.getProduct('H'), 5, 5);
 
-        discountValue += applyBulkDeal(productCatalog.getProduct('K'), 2, 10);
+        discountValue += applyBulkDeal(productCatalog.getProduct('K'), 2, 20);
 
         discountValue += applyBulkDeal(productCatalog.getProduct('P'), 5, 50);
 
@@ -110,6 +110,7 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
 
