@@ -98,4 +98,24 @@ public class CheckoutSolution {
         return dealValue;
     }
 
+    public int applyBulkGroupDeal(Product[] mainProducts, int mainProductsAmount, int priceDiscount) {
+        int totalAmount = 0;
+        int totalPriceDiscount = 0;
+
+        for (Product product : mainProducts) {
+            totalAmount+= product.getAmount();
+        }
+
+        for (Product product : mainProducts) {
+            totalPriceDiscount+=
+        }
+
+
+
+        int dealValue = (totalAmount / mainProductsAmount) * priceDiscount;
+        mainProduct.setAmount(mainProduct.getAmount() % mainProductsAmount);
+        return dealValue;
+    }
+
 }
+
