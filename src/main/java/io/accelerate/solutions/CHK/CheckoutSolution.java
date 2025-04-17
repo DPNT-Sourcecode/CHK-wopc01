@@ -7,15 +7,30 @@ public class CheckoutSolution {
 
     HashMap<Character, Product> catalogueValues = new HashMap<>();
     catalogueValues.put('A', new Product('A',50, 0));
-    catalogueValues.put('B', new Product('A',50, 0));
-    catalogueValues.put('C', new Product('A',50, 0));
-    catalogueValues.put('D', new Product('A',50, 0));
-    catalogueValues.put('E', new Product('A',50, 0));
-    catalogueValues.put('F', 30);
-    catalogueValues.put('G', 20);
-    catalogueValues.put('H', 15);
-    catalogueValues.put('I', 40);
-    catalogueValues.put('F', 10);
+    catalogueValues.put('B', new Product('B',30, 0));
+    catalogueValues.put('C', new Product('C',50, 0));
+    catalogueValues.put('D', new Product('D',50, 0));
+    catalogueValues.put('E', new Product('E',50, 0));
+    catalogueValues.put('F', new Product('F',50, 0));
+    catalogueValues.put('G', new Product('G',50, 0));
+    catalogueValues.put('H', new Product('H',50, 0));
+    catalogueValues.put('I', new Product('I',50, 0));
+    catalogueValues.put('J', new Product('J',50, 0));
+    catalogueValues.put('K', new Product('K',50, 0));
+    catalogueValues.put('L', new Product('L',50, 0));
+    catalogueValues.put('M', new Product('M',50, 0));
+    catalogueValues.put('N', new Product('N',50, 0));
+    catalogueValues.put('O', new Product('O',50, 0));
+    catalogueValues.put('P', new Product('P',50, 0));
+    catalogueValues.put('Q', new Product('Q',50, 0));
+    catalogueValues.put('R', new Product('R',50, 0));
+    catalogueValues.put('S', new Product('S',50, 0));
+    catalogueValues.put('T', new Product('T',50, 0));
+    catalogueValues.put('U', new Product('U',50, 0));
+    catalogueValues.put('W', new Product('W',50, 0));
+    catalogueValues.put('X', new Product('X',50, 0));
+    catalogueValues.put('Y', new Product('Y',50, 0));
+    catalogueValues.put('Z', new Product('Z',50, 0));
 
 
     public Integer checkout(String skus) {
@@ -66,5 +81,6 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
