@@ -14,11 +14,20 @@ public class CheckoutSolution {
 
         if (!skus.matches("[A-Z]+"))
             return -1;
+
         int currentBasketValue = 0;
 
         for (char item : skus.toCharArray()) {
             productCatalog.getProduct(item).amount++;
         }
+
+        applyAllFreeDeals();
+        applyAllBulkDeals();
+
+        for (Product product : productCatalog.getProductCatalogMap().values()) {
+            currentBasketValue += (product.amount * product.price);
+        }
+
 
         // // E discount
         // currentBasketValue -= Math.min((eCounter / 2), bCounter) * 30;
@@ -67,6 +76,7 @@ public class CheckoutSolution {
         discountValue += applyBulkDeal(productCatalog.getProduct('V'), 3, 20);
         discountValue += applyBulkDeal(productCatalog.getProduct('V'), 2, 10);
 
+        return discountValue;
     }
 
     public void applyFreeDeal(Product mainProduct, Product dealProduct, int mainProductAmount) {
@@ -78,6 +88,7 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
 
