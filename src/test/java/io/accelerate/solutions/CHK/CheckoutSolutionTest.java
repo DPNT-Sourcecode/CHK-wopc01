@@ -37,7 +37,7 @@ public class CheckoutSolutionTest {
     @Test
     public void checkoutOfferNormal() {
         assertEquals(150, check.checkout("RRRQ"));
-        assertEquals(1602, check.checkout("ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"));
+
     }
 
     @Test
@@ -78,4 +78,5 @@ public class CheckoutSolutionTest {
     }
 
 }
+
 

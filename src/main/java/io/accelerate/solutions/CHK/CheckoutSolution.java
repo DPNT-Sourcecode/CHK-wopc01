@@ -94,15 +94,10 @@ public class CheckoutSolution {
         int totalPriceItems = (totalAmount / mainProductsDealAmount) * mainProductsDealAmount;
         System.out.println(totalPriceItems);
         for (Product product : mainProducts) {
-            whilte (product.getAmount() > 0 )
-            if (totalPriceItems <= 0)
-                break;
-            if (totalPriceItems - product.getAmount() >= 0) {
-                totalPriceDiscount += product.getAmount() * product.getPrice();
-                totalPriceItems -= product.getAmount();
-            } else {
-                totalPriceDiscount += product.getAmount() * product.getPrice();
-                totalPriceItems -= product.getAmount() - 1;
+            while (product.getAmount() > 0 && totalPriceItems > 0) {
+                totalPriceDiscount += product.getPrice();
+                totalPriceItems --;
+                product.setAmount(product.getAmount()- 1);
             }
         }
 
@@ -112,6 +107,7 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
 
