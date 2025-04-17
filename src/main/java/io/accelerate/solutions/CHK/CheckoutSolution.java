@@ -104,10 +104,10 @@ public class CheckoutSolution {
             }
         }
 
-        int dealValue = (totalAmount / mainProductsDealAmount)
-                * (totalPriceDiscount - ((totalAmount / mainProductsDealAmount) * 45));
+        int dealValue = (totalPriceDiscount - ((totalAmount / mainProductsDealAmount) * 45));
 
         return dealValue;
     }
 
 }
+
