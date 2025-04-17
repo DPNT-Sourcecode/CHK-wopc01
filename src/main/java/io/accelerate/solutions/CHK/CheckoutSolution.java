@@ -25,12 +25,12 @@ public class CheckoutSolution {
             currentBasketValue += catalogueValues.get(item);
         }
 
-        currentBasketValue -= (aCounter % 3) * 20 + (bCounter % 2) * 15;
+        currentBasketValue -= (aCounter / 3) * 20 + (bCounter / 2) * 15;
 
         return currentBasketValue;
     }
+
+    public static void main(String[] args) {
+        System.out.println((4 / 3) * 20 + (0 / 2) * 15);
+    }
 }
-
-
-
-
