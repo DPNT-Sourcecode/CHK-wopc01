@@ -1,6 +1,9 @@
 package io.accelerate.solutions.CHK;
 
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.BeforeEach;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -17,7 +20,7 @@ public class CheckoutSolutionTest {
 
     @Test
     public void checkoutNormal() {
-
+        assertEquals(190, check.checkout("ABBBBA"));
     }
 
     @Test
@@ -26,3 +29,4 @@ public class CheckoutSolutionTest {
     }
 
 }
+
