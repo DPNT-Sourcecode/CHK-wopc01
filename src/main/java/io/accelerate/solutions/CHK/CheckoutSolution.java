@@ -18,9 +18,11 @@ public class CheckoutSolution {
         catalogueValues.put('B', 30);
         catalogueValues.put('C', 20);
         catalogueValues.put('D', 15);
+        catalogueValues.put('D', 40);
 
         int aCounter = 0;
         int bCounter = 0;
+        int eCounter = 0;
         int currentBasketValue = 0;
 
         for (char item : skus.toCharArray()) {
@@ -32,13 +34,12 @@ public class CheckoutSolution {
             currentBasketValue += catalogueValues.get(item);
         }
 
-        currentBasketValue -= (aCounter / 3) * 20 + (bCounter / 2) * 15;
+        if (bCounter > 0) bCounter -= (eCounter / 2);
+        
+        currentBasketValue -= (aCounter / 5) * 50 + (aCounter / 2) * 15;
+
+        currentBasketValue -= bCounter / 2 * 15;
         return currentBasketValue;
     }
 
 }
-
-
-
-
-
