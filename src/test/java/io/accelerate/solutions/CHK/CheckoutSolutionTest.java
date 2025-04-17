@@ -16,13 +16,14 @@ public class CheckoutSolutionTest {
     @BeforeEach
     public void setUp() {
         check = new CheckoutSolution();
+
     }
 
     @Test
     public void checkoutOfferA() {
         // assertEquals(145, check.checkout("AABB"));
-        assertEquals(130, check.checkout("AAA"));
-        // assertEquals(200, check.checkout("AAAAA"));
+        // assertEquals(130, check.checkout("AAA"));
+        assertEquals(200, check.checkout("AAAAA"));
     }
 
     @Test
@@ -69,4 +70,5 @@ public class CheckoutSolutionTest {
     }
 
 }
+
 

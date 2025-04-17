@@ -58,8 +58,11 @@ public class CheckoutSolution {
     public int applyAllBulkDeals() {
         int discountValue = 0;
 
+        System.out.println("deal for " + discountValue);
         discountValue += applyBulkDeal(productCatalog.getProduct('A'), 5, 50);
+        System.out.println("deal for " + discountValue);
         discountValue += applyBulkDeal(productCatalog.getProduct('A'), 3, 20);
+        System.out.println("deal for " + discountValue);
         discountValue += applyBulkDeal(productCatalog.getProduct('B'), 2, 15);
 
         discountValue += applyBulkDeal(productCatalog.getProduct('H'), 10, 20);
@@ -74,7 +77,7 @@ public class CheckoutSolution {
         discountValue += applyBulkDeal(productCatalog.getProduct('V'), 3, 20);
         discountValue += applyBulkDeal(productCatalog.getProduct('V'), 2, 10);
 
-        System.out.println("deal for " + discountValue);
+        
         return discountValue;
     }
 
@@ -85,8 +88,10 @@ public class CheckoutSolution {
     public int applyBulkDeal(Product mainProduct, int mainProductAmount, int priceDiscount) {
         int dealValue = (mainProduct.getAmount() / mainProductAmount) * priceDiscount;
         mainProduct.setAmount(mainProduct.getAmount() - (mainProduct.getAmount() / mainProductAmount));
+        System.out.println();
         return dealValue;
     }
 
 }
+
 
