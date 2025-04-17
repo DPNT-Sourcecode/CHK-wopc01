@@ -94,7 +94,8 @@ public class CheckoutSolution {
         int totalPriceItems = (totalAmount / mainProductsDealAmount) * mainProductsDealAmount;
 
         for (Product product : mainProducts) {
-            if (totalPriceItems - product.getAmount() >= 0) {
+            System.out.println(totalPriceItems);
+            if (totalPriceItems - product.getAmount() > 0) {
                 totalPriceDiscount += product.getAmount() * product.getPrice();
                 totalPriceItems -= product.getAmount();
             } else {
@@ -112,5 +113,6 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
