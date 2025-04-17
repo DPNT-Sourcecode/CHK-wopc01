@@ -6,7 +6,7 @@ import io.accelerate.solutions.CHK.ProductCatalog;
 
 public class CheckoutSolution {
 
-    ProductCatalog productCatalog = new ProductCatalog();
+    ProductCatalog productCatalog;
 
     public Integer checkout(String skus) {
         if (skus == "")
@@ -15,6 +15,7 @@ public class CheckoutSolution {
         if (!skus.matches("[A-Z]+"))
             return -1;
 
+        productCatalog = new ProductCatalog();
         int currentBasketValue = 0;
 
         for (char item : skus.toCharArray()) {
@@ -77,7 +78,6 @@ public class CheckoutSolution {
         discountValue += applyBulkDeal(productCatalog.getProduct('V'), 3, 20);
         discountValue += applyBulkDeal(productCatalog.getProduct('V'), 2, 10);
 
-        
         return discountValue;
     }
 
@@ -87,12 +87,13 @@ public class CheckoutSolution {
 
     public int applyBulkDeal(Product mainProduct, int mainProductAmount, int priceDiscount) {
         int dealValue = (mainProduct.getAmount() / mainProductAmount) * priceDiscount;
-        mainProduct.setAmount(mainProduct.getAmount() - (mainProduct.getAmount() / mainProductAmount));
+        mainProduct.setAmount(mainProduct.getAmount() % mainProductAmount);
         System.out.println(mainProduct.getAmount());
         return dealValue;
     }
 
 }
+
 
 
 
