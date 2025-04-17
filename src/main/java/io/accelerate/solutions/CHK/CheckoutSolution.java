@@ -74,6 +74,7 @@ public class CheckoutSolution {
         discountValue += applyBulkDeal(productCatalog.getProduct('V'), 3, 20);
         discountValue += applyBulkDeal(productCatalog.getProduct('V'), 2, 10);
 
+        System.out.println("deal for " + discountValue);
         return discountValue;
     }
 
@@ -88,3 +89,4 @@ public class CheckoutSolution {
     }
 
 }
+
