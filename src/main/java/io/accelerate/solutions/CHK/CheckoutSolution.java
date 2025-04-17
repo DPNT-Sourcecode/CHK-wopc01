@@ -2,11 +2,11 @@ package io.accelerate.solutions.CHK;
 
 import java.util.HashMap;
 import io.accelerate.solutions.CHK.Product;
-import io.accelerate.solutions.CHK.Product;
+import io.accelerate.solutions.CHK.ProductCatalog;
 
 public class CheckoutSolution {
 
-
+    ProductCatalog productCatalog = new ProductCatalog();
 
     public Integer checkout(String skus) {
         if (skus == "")
@@ -14,13 +14,6 @@ public class CheckoutSolution {
 
         if (!skus.matches("[A-Z]+"))
             return -1;
-
-
-
-        int aCounter = 0;
-        int bCounter = 0;
-        int eCounter = 0;
-        int fCounter = 0;
         int currentBasketValue = 0;
 
         for (char item : skus.toCharArray()) {
@@ -56,3 +49,4 @@ public class CheckoutSolution {
     }
 
 }
+
