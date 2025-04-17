@@ -101,12 +101,13 @@ public class CheckoutSolution {
             }
         }
 
-        System.out.println(totalPriceDiscount);
+        
         int dealValue = (totalAmount / mainProductsDealAmount) * (totalPriceDiscount - ((totalAmount / mainProductsDealAmount) * 45));
         return dealValue;
     }
 
 }
+
 
 
 
