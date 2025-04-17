@@ -1,10 +1,18 @@
 package io.accelerate.solutions.CHK;
 
 import java.util.HashMap;
+import Product;
 
 public class CheckoutSolution {
 
-    HashMap<Character, Integer> catalogueValues;
+    HashMap<Character, Product> catalogueValues = new HashMap<>();
+    catalogueValues.put('A', 50);
+    catalogueValues.put('B', 30);
+    catalogueValues.put('C', 20);
+    catalogueValues.put('D', 15);
+    catalogueValues.put('E', 40);
+    catalogueValues.put('F', 10);
+
 
     public Integer checkout(String skus) {
         if (skus == "")
@@ -13,13 +21,7 @@ public class CheckoutSolution {
         if (!skus.matches("[A-Z]+"))
             return -1;
 
-        catalogueValues = new HashMap<>();
-        catalogueValues.put('A', 50);
-        catalogueValues.put('B', 30);
-        catalogueValues.put('C', 20);
-        catalogueValues.put('D', 15);
-        catalogueValues.put('E', 40);
-        catalogueValues.put('F', 10);
+
 
         int aCounter = 0;
         int bCounter = 0;
@@ -60,3 +62,4 @@ public class CheckoutSolution {
     }
 
 }
+
