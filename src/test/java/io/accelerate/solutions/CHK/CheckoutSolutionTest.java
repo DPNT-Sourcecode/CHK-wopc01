@@ -16,9 +16,15 @@ public class CheckoutSolutionTest {
     }
 
     @Test
-    public void checkout() {
-        
+    public void checkoutNormal() {
+
+    }
+
+    @Test
+    public void checkoutNotValidStringFail() {
+
     }
 
 }
+
 
