@@ -21,13 +21,12 @@ public class CheckoutSolution {
             productCatalog.getProduct(item).amount++;
         }
 
-        applyAllFreeDeals();
-        applyAllBulkDeals();
-
         for (Product product : productCatalog.getProductCatalogMap().values()) {
             currentBasketValue += (product.amount * product.price);
         }
 
+        applyAllFreeDeals();
+        applyAllBulkDeals();
 
         // // E discount
         // currentBasketValue -= Math.min((eCounter / 2), bCounter) * 30;
@@ -84,10 +83,13 @@ public class CheckoutSolution {
     }
 
     public int applyBulkDeal(Product mainProduct, int mainProductAmount, int priceDiscount) {
-        return (mainProduct.getAmount() / mainProductAmount) * priceDiscount;
+        int dealValue = (mainProduct.getAmount() / mainProductAmount) * priceDiscount;
+        mainProduct.getAmount() = (mainProduct.getAmount() / mainProductAmount);
+        return dealValue;
     }
 
 }
+
 
 
 
