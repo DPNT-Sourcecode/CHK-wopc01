@@ -82,11 +82,15 @@ public class CheckoutSolution {
     }
 
     public int applyFreeDeal(Product mainProduct, Product dealProduct, int mainProductAmount) {
-        return (mainProduct.getAmount() / mainProductAmount) * dealProduct.getPrice();
+        int valuePrice = (mainProduct.getAmount() / mainProductAmount) * dealProduct.getPrice();
+        dealProduct.setAmount(dealProduct.getAmount() - mainProduct.getAmount() / mainProductAmount);
+        return valuePrice;
     }
 
     public int applySameProdFreeDeal(Product mainProduct, int mainProductAmount) {
-        return (mainProduct.getAmount() / (mainProductAmount + 1)) * mainProduct.getPrice();
+        int valuePrice = (mainProduct.getAmount() / (mainProductAmount + 1)) * mainProduct.getPrice();
+        mainProduct.setAmount(mainProduct.getAmount() / mainProductAmount);
+        return valuePrice;
     }
 
     public int applyBulkDeal(Product mainProduct, int mainProductAmount, int priceDiscount) {
@@ -96,6 +100,7 @@ public class CheckoutSolution {
     }
 
 }
+
 
 
 
