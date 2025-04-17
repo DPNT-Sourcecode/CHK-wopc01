@@ -81,34 +81,27 @@ public class CheckoutSolution {
         return dealValue;
     }
 
-    public int applyBulkGroupDeal(int mainProductsAmount) {
+    public int applyBulkGroupDeal(int mainProductsDealAmount) {
         Product[] mainProducts = new Product[] { productCatalog.getProduct('Z'), productCatalog.getProduct('T'),
                 productCatalog.getProduct('S'), productCatalog.getProduct('Y'), productCatalog.getProduct('X') };
         int totalAmount = 0;
         int totalPriceDiscount = 0;
-        int totalPriceItems = totalAmount / mainProductsAmount;
+        int totalPriceItems = totalAmount / mainProductsDealAmount;
 
         for (Product product : mainProducts) {
             totalAmount += product.getAmount();
         }
 
         for (Product product : mainProducts) {
-            System.out.println(product.getAmount());
             if (totalPriceItems > 0) {
                 totalPriceDiscount += product.getAmount() * product.getPrice();
                 totalPriceItems -= product.getAmount();
             }
         }
 
-        
-        System.out.println(mainProductsAmount);
-        int dealValue = (totalAmount / mainProductsAmount) * (totalPriceDiscount - (totalAmount / mainProductsAmount));
+        int dealValue = (totalAmount / mainProductsDealAmount) * (totalPriceDiscount - (totalAmount / mainProductsDealAmount));
+        System.out.println(4/3 );
         return dealValue;
     }
 
 }
-
-
-
-
-
