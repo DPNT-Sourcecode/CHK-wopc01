@@ -17,16 +17,20 @@ public class CheckoutSolution {
         catalogueValues.put('C', 20);
         catalogueValues.put('D', 15);
 
+        int aCounter = 0;
+        int bCounter = 0;
         int currentBasketValue = 0;
 
         for (char item : skus.toCharArray()) {
-            
-
+            currentBasketValue += catalogueValues.get(item);
         }
 
-        return -1;
+        currentBasketValue -= (aCounter % 3) * 20 + (bCounter % 2) * 15;
+
+        return currentBasketValue;
     }
 }
+
 
 
 
